@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About HaloedDude | Haloed Vertex</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN & Lucide Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        corpDark: '#07090e',
+                        corpPanel: '#0d111a',
+                        corpBorder: '#1c2438',
+                        lemonYellow: '#facc15',
+                        brandCyan: '#00f0ff'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #07090e;
+            color: #cbd5e1;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .bg-grid {
+            background-size: 36px 36px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        .firm-card {
+            background: #0d121c;
+            border: 1px solid #1c2438;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .firm-card:hover {
+            border-color: #38bdf8;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        .img-transparent {
+            background: transparent !important;
+            filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
+        }
+    </style>
+</head>
+<body class="bg-grid min-h-screen flex flex-col selection:bg-cyan-400 selection:text-black">
+    
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#07090e]/95 border-b border-[#182033]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <img src="HV.png" alt="Haloed Vertex Logo" class="h-11 w-auto object-contain img-transparent group-hover:scale-105 transition-transform" onerror="this.src='logo.png';">
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-lg sm:text-xl text-white tracking-tight leading-none">HALOED VERTEX</span>
+                    <span class="text-[10px] font-mono tracking-widest text-cyan-400 font-bold uppercase mt-1">Investment & Growth</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="hidden md:flex items-center gap-1 bg-[#0d121c]/90 p-1.5 rounded-xl border border-[#1c2438]">
+                <a href="index.html" class="group flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all border text-slate-400 hover:text-white hover:bg-slate-800/40 border-transparent">
+                    <i data-lucide="building-2" class="w-4 h-4 text-slate-400 group-hover:text-slate-200"></i>
+                    <span>Home</span>
+                </a>
+                <a href="demon-lemon.html" class="group flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all border text-slate-400 hover:text-white hover:bg-slate-800/40 border-transparent">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-slate-400 group-hover:text-slate-200"></i>
+                    <span>Demon Lemon Studio</span>
+                </a>
+                <a href="community.html" class="group flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all border text-slate-400 hover:text-white hover:bg-slate-800/40 border-transparent">
+                    <i data-lucide="users" class="w-4 h-4 text-slate-400 group-hover:text-slate-200"></i>
+                    <span>Community & Discords</span>
+                </a>
+                <a href="about-me.html" class="group flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all border text-white bg-slate-800/90 border-slate-700 shadow-sm">
+                    <i data-lucide="user" class="w-4 h-4 text-cyan-400"></i>
+                    <span>About Founder</span>
+                </a>
+            </nav>
+
+            <!-- Quick Action -->
+            <div class="flex items-center gap-3">
+                <a href="community.html" class="px-4 py-2.5 rounded-lg bg-[#5865F2]/20 hover:bg-[#5865F2]/30 border border-[#5865F2]/40 text-indigo-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2">
+                    <i data-lucide="message-square" class="w-4 h-4 text-indigo-300"></i>
+                    <span class="hidden sm:inline">Join Discords</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#07090e]/95 backdrop-blur-lg border-t border-[#182033] px-3 py-2 flex justify-around items-center">
+        <a href="index.html" class="flex flex-col items-center gap-1 text-[10px] text-slate-400">
+            <i data-lucide="building-2" class="w-5 h-5"></i>
+            <span>Home</span>
+        </a>
+        <a href="demon-lemon.html" class="flex flex-col items-center gap-1 text-[10px] text-slate-400">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+            <span>Studio</span>
+        </a>
+        <a href="community.html" class="flex flex-col items-center gap-1 text-[10px] text-slate-400">
+            <i data-lucide="users" class="w-5 h-5"></i>
+            <span>Community</span>
+        </a>
+        <a href="about-me.html" class="flex flex-col items-center gap-1 text-[10px] text-cyan-300 font-bold">
+            <i data-lucide="user" class="w-5 h-5"></i>
+            <span>About</span>
+        </a>
+    </div>
+
+    <main class="flex-1">
+        
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-3">
+                <i data-lucide="user" class="w-4 h-4"></i>
+                EXECUTIVE LEADERSHIP
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+                About the Founder
+            </h1>
+            <p class="text-slate-400 text-sm sm:text-base">
+                Architecting digital ecosystems, high-scale ventures, and immersive gaming experiences.
+            </p>
+        </div>
+
+        <!-- Personal Spotlight Card with haloeddude.png -->
+        <div class="firm-card rounded-3xl p-8 sm:p-12 mb-12 border-cyan-500/30">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                <!-- Avatar / Logo (haloeddude.png) -->
+                <div class="w-36 h-36 rounded-2xl bg-[#06080d] border-2 border-cyan-500/40 shadow-[0_0_30px_rgba(0,240,255,0.15)] overflow-hidden shrink-0 flex items-center justify-center">
+                    <img src="haloeddude.png" alt="HaloedDude Logo" class="w-full h-full object-cover" onerror="this.src='HV.png';">
+                </div>
+
+                <div class="flex-1 text-center md:text-left space-y-4">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs font-bold uppercase mb-2">
+                            FOUNDER & MANAGING DIRECTOR
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-white">HaloedDude</h2>
+                    </div>
+
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        As the founder and lead architect behind <strong>Haloed Vertex</strong>, <strong>Demon Lemon Studio</strong>, and projects like <strong>Ulm Horizons</strong>, I focus on driving high-standard digital ventures, structural automation, and top-tier community roleplay.
+                    </p>
+                    
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Combining advanced Roblox Luau engineering, robust backend systems, and clean corporate design, my goal is to build scalable ecosystems that stand out in quality and execution.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-2 pt-2 text-xs font-mono text-slate-300">
+                        <span class="bg-[#121724] border border-[#1e2638] px-3 py-1.5 rounded">Venture Direction</span>
+                        <span class="bg-[#121724] border border-[#1e2638] px-3 py-1.5 rounded">Studio Architecture</span>
+                        <span class="bg-[#121724] border border-[#1e2638] px-3 py-1.5 rounded">Luau Engineering</span>
+                        <span class="bg-[#121724] border border-[#1e2638] px-3 py-1.5 rounded">System Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Card (Centered Single Card since Discord is removed) -->
+        <div class="max-w-xl mx-auto">
+            <div class="firm-card rounded-2xl p-7 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mb-4">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Official Business Contact</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                        For official business inquiries, partnerships, or administrative correspondence:
+                    </p>
+                    <div class="p-3 bg-[#060910] rounded-xl border border-[#1c2438] text-cyan-400 font-mono text-sm font-semibold select-all mb-6 text-center">
+                        support@haloedvertex.com
+                    </div>
+                </div>
+                <a href="mailto:support@haloedvertex.com" class="w-full py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,240,255,0.2)]">
+                    <i data-lucide="send" class="w-4 h-4"></i> Send Email
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    </main>
+
+    <!-- Corporate Footer -->
+    <footer class="bg-[#05070a] border-t border-[#141a29] py-10 px-4 mt-20 mb-16 md:mb-0 text-xs font-mono text-slate-500">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3.5">
+                <img src="HV.png" alt="HV Logo" class="h-8 w-auto object-contain img-transparent" onerror="this.src='logo.png';">
+                <span class="text-white font-bold tracking-wider">HALOED VERTEX</span>
+                <span class="text-slate-700">|</span>
+                <span>Parent Holding of <strong class="text-yellow-400">Demon Lemon Studio</strong></span>
+            </div>
+            <div class="flex items-center gap-6 text-xs font-medium text-slate-400">
+                <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+                <a href="demon-lemon.html" class="hover:text-yellow-400 transition-colors">Demon Lemon Studio</a>
+                <a href="community.html" class="hover:text-indigo-400 transition-colors">Community Hub</a>
+                <a href="about-me.html" class="hover:text-cyan-300 transition-colors">About Founder</a>
+            </div>
+            <p>© 2026 Haloed Vertex. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

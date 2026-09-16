@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community & Discords | Haloed Vertex</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN & Lucide Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        corpDark: '#07090e',
+                        corpPanel: '#0d111a',
+                        corpBorder: '#1c2438',
+                        lemonYellow: '#facc15',
+                        brandCyan: '#00f0ff'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #07090e;
+            color: #cbd5e1;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .bg-grid {
+            background-size: 36px 36px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        .firm-card {
+            background: #0d121c;
+            border: 1px solid #1c2438;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .firm-card:hover {
+            border-color: #38bdf8;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        .firm-card-lemon:hover {
+            border-color: #facc15;
+            box-shadow: 0 16px 32px -12px rgba(250, 204, 21, 0.12);
+        }
+
+        .firm-card-discord:hover {
+            border-color: #5865f2;
+            box-shadow: 0 16px 32px -12px rgba(88, 101, 242, 0.15);
+        }
+
+        .img-transparent {
+            background: transparent !important;
+            filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
+        }
+    </style>
+</head>
+<body class="bg-grid min-h-screen flex flex-col selection:bg-cyan-400 selection:text-black">
+    
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#07090e]/95 border-b border-[#182033]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <img src="HV.png" alt="Haloed Vertex Logo" class="h-11 w-auto object-contain img-transparent group-hover:scale-105 transition-transform" onerror="this.src='logo.png';">
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-lg sm:text-xl text-white tracking-tight leading-none">HALOED VERTEX</span>
+                    <span class="text-[10px] font-mono tracking-widest text-cyan-400 font-bold uppercase mt-1">Investment & Growth</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="hidden md:flex items-center gap-1 bg-[#0d121c]/90 p-1.5 rounded-xl border border-[#1c2438]">
+                <a href="index.html" class="group flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all border text-slate-400 hover:text-white hover:bg-slate-800/40 border-transparent">
+                    <i data-lucide="building-2" class="w-4 h-4 text-slate-400 group-hover:text-slate-200"></i>
+                    <span>Home</span>
+                </a>
+                <a href="demon-lemon.html" class="group flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all border text-slate-400 hover:text-white hover:bg-slate-800/40 border-transparent">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-slate-400 group-hover:text-slate-200"></i>
+                    <span>Demon Lemon Studio</span>
+                </a>
+                <a href="community.html" class="group flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all border text-white bg-slate-800/90 border-slate-700 shadow-sm">
+                    <i data-lucide="users" class="w-4 h-4 text-cyan-400"></i>
+                    <span>Community & Discords</span>
+                </a>
+                <a href="about-me.html" class="group flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all border text-slate-400 hover:text-white hover:bg-slate-800/40 border-transparent">
+                    <i data-lucide="user" class="w-4 h-4 text-slate-400 group-hover:text-slate-200"></i>
+                    <span>About Founder</span>
+                </a>
+            </nav>
+
+            <!-- Quick Action -->
+            <div class="flex items-center gap-3">
+                <a href="community.html" class="px-4 py-2.5 rounded-lg bg-[#5865F2]/20 hover:bg-[#5865F2]/30 border border-[#5865F2]/40 text-indigo-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2">
+                    <i data-lucide="message-square" class="w-4 h-4 text-indigo-300"></i>
+                    <span class="hidden sm:inline">Join Discords</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#07090e]/95 backdrop-blur-lg border-t border-[#182033] px-3 py-2 flex justify-around items-center">
+        <a href="index.html" class="flex flex-col items-center gap-1 text-[10px] text-slate-400">
+            <i data-lucide="building-2" class="w-5 h-5"></i>
+            <span>Home</span>
+        </a>
+        <a href="demon-lemon.html" class="flex flex-col items-center gap-1 text-[10px] text-slate-400">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+            <span>Studio</span>
+        </a>
+        <a href="community.html" class="flex flex-col items-center gap-1 text-[10px] text-indigo-400 font-bold">
+            <i data-lucide="users" class="w-5 h-5"></i>
+            <span>Community</span>
+        </a>
+        <a href="about-me.html" class="flex flex-col items-center gap-1 text-[10px] text-slate-400">
+            <i data-lucide="user" class="w-5 h-5"></i>
+            <span>About Founder</span>
+        </a>
+    </div>
+
+    <main class="flex-1">
+        
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#5865F2]/10 border border-[#5865F2]/30 text-indigo-300 text-xs font-mono mb-3">
+                <i data-lucide="users" class="w-4 h-4"></i>
+                ECOSYSTEM DIRECTORY
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+                Community & Network Hub
+            </h1>
+            <p class="text-slate-400 text-sm sm:text-base">
+                All official Discord servers, Roblox groups, and social media channels across our studios and projects.
+            </p>
+        </div>
+
+        <!-- SECTION 1: DISCORD SERVERS -->
+        <div class="mb-16">
+            <div class="flex items-center gap-3 mb-6 pb-2 border-b border-[#1c2438]">
+                <i data-lucide="message-square" class="w-5 h-5 text-indigo-400"></i>
+                <h2 class="text-xl font-bold text-white">Official Discord Servers</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Discord 1: Haloed Vertex (Main Comms) -->
+                <div class="firm-card firm-card-discord rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#5865F2]/15 border border-[#5865F2]/30 text-indigo-300 font-mono font-bold flex items-center justify-center text-lg">
+                                HV
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+                                Main Comms
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Haloed Vertex</h3>
+                        <p class="text-xs text-cyan-400 font-mono mb-3">Central Network Hub</p>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            The primary communication and main community server for all ventures, developer networking, announcements, and direct chat with HaloedDude.
+                        </p>
+                    </div>
+                    <a href="https://discord.gg/WYctsyHVJ" target="_blank" class="w-full py-2.5 rounded-xl bg-[#5865F2] hover:bg-indigo-500 text-white font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="message-square" class="w-4 h-4"></i> Join Server
+                    </a>
+                </div>
+
+                <!-- Discord 2: Haloed Support -->
+                <div class="firm-card rounded-2xl p-6 border-rose-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 font-mono font-bold flex items-center justify-center text-lg">
+                                HS
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-mono">
+                                Bug Fixes & Reports
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Haloed Support</h3>
+                        <p class="text-xs text-rose-400 font-mono mb-3">General Support Hub</p>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Dedicated support center handling bug fixes, player reports, appeals, and general assistance across projects.
+                        </p>
+                    </div>
+                    <a href="https://discord.gg/WkYdkR8fu3" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-rose-500/30 text-rose-300 font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="shield-alert" class="w-4 h-4"></i> Open Support Hub
+                    </a>
+                </div>
+
+                <!-- Discord 3: Ulm Horizons | Hardcore RP -->
+                <div class="firm-card rounded-2xl p-6 border-cyan-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-mono font-bold flex items-center justify-center text-lg">
+                                UH
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+                                ER:LC Roleplay
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Ulm Horizons | Hardcore RP</h3>
+                        <p class="text-xs text-cyan-400 font-mono mb-3">Serious ER:LC Server</p>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Official community and roleplay server for our German ER:LC server based in Ulm with strict rules and BOS structures.
+                        </p>
+                    </div>
+                    <a href="#" target="_blank" class="w-full py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-black font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="radio" class="w-4 h-4"></i> Join Roleplay
+                    </a>
+                </div>
+
+                <!-- Discord 4: Ulm Horizons Support -->
+                <div class="firm-card rounded-2xl p-6 border-blue-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 font-mono font-bold flex items-center justify-center text-lg">
+                                US
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-mono">
+                                Whitelist & Tickets
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Ulm Horizons Support</h3>
+                        <p class="text-xs text-blue-400 font-mono mb-3">Server Assistance</p>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Dedicated assistance and whitelist application hub for the Ulm Horizons ER:LC server.
+                        </p>
+                    </div>
+                    <a href="#" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-blue-500/30 text-blue-300 font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="life-buoy" class="w-4 h-4"></i> Get Support
+                    </a>
+                </div>
+
+                <!-- Discord 5: Task Force Germany: MilSim -->
+                <div class="firm-card firm-card-lemon rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 text-yellow-300 font-mono font-bold flex items-center justify-center text-lg">
+                                TF
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+                                Active MilSim
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Task Force Germany: MilSim</h3>
+                        <p class="text-xs text-yellow-400 font-mono mb-3">By Demon Lemon Studio</p>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Tactical operations and communication hub for our Roblox military simulation game.
+                        </p>
+                    </div>
+                    <a href="https://discord.gg/DTQ2JcMtdj" target="_blank" class="w-full py-2.5 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> Join Server
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECTION 2: ROBLOX GROUPS -->
+        <div class="mb-16">
+            <div class="flex items-center gap-3 mb-6 pb-2 border-b border-[#1c2438]">
+                <i data-lucide="gamepad-2" class="w-5 h-5 text-amber-400"></i>
+                <h2 class="text-xl font-bold text-white">Roblox Groups</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Group 1: Haloed Vertex -->
+                <div class="firm-card rounded-2xl p-6 flex flex-col justify-between gap-4">
+                    <div class="flex items-center gap-4 text-center sm:text-left">
+                        <img src="HV.png" alt="HV Logo" class="w-14 h-14 object-contain img-transparent shrink-0" onerror="this.src='logo.png';">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Haloed Vertex Holdings</h3>
+                            <p class="text-xs text-slate-400 mt-0.5">Official Venture & Community Group</p>
+                        </div>
+                    </div>
+                    <a href="https://www.roblox.com/communities/199941252/Haloed-Vertex#!/about" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase tracking-wider text-center">
+                        Join Group
+                    </a>
+                </div>
+
+                <!-- Group 2: Demon Lemon Studio -->
+                <div class="firm-card rounded-2xl p-6 flex flex-col justify-between gap-4">
+                    <div class="flex items-center gap-4 text-center sm:text-left">
+                        <img src="DLStudio.png" alt="Lemon Logo" class="w-14 h-14 object-contain img-transparent shrink-0" onerror="this.src='logo.png';">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Demon Lemon Studio</h3>
+                            <p class="text-xs text-slate-400 mt-0.5">Primary Game Development Studio</p>
+                        </div>
+                    </div>
+                    <a href="https://www.roblox.com/communities/149381929/Demon-Lemon-Studio#!/about" target="_blank" class="w-full py-2.5 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-xs uppercase tracking-wider text-center">
+                        Join Group
+                    </a>
+                </div>
+
+                <!-- Group 3: Ulm Horizons -->
+                <div class="firm-card rounded-2xl p-6 flex flex-col justify-between gap-4">
+                    <div class="flex items-center gap-4 text-center sm:text-left">
+                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-mono font-bold flex items-center justify-center shrink-0">
+                            UH
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Ulm Horizons</h3>
+                            <p class="text-xs text-slate-400 mt-0.5">ER:LC Community Group</p>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="w-full py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-black font-bold text-xs uppercase tracking-wider text-center">
+                        Join Group
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: SOCIAL MEDIA CHANNELS -->
+        <div>
+            <div class="flex items-center gap-3 mb-6 pb-2 border-b border-[#1c2438]">
+                <i data-lucide="share-2" class="w-5 h-5 text-cyan-400"></i>
+                <h2 class="text-xl font-bold text-white">Social Media Channels</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="https://youtube.com" target="_blank" class="firm-card rounded-xl p-5 text-center group hover:border-red-500/50">
+                    <div class="flex items-center justify-center gap-2 mb-2">
+                        <i data-lucide="youtube" class="w-6 h-6 text-red-400 group-hover:scale-110 transition-transform"></i>
+                        <i data-lucide="video" class="w-5 h-5 text-red-400 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <div class="text-sm font-bold text-white">YouTube (Haloed Vertex)</div>
+                    <span class="text-[10px] text-slate-400 font-mono">Trailers & Devlogs</span>
+                </a>
+                <a href="https://tiktok.com" target="_blank" class="firm-card rounded-xl p-5 text-center group hover:border-pink-500/50">
+                    <i data-lucide="video" class="w-6 h-6 text-pink-400 mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-bold text-white">TikTok (Haloed Vertex)</div>
+                    <span class="text-[10px] text-slate-400 font-mono">Studio Clips & Shorts</span>
+                </a>
+                <a href="https://tiktok.com" target="_blank" class="firm-card rounded-xl p-5 text-center group hover:border-cyan-500/50">
+                    <i data-lucide="video" class="w-6 h-6 text-cyan-400 mx-auto mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-bold text-white">TikTok (Ulm Horizons)</div>
+                    <span class="text-[10px] text-slate-400 font-mono">Roleplay Highlights</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <!-- Corporate Footer -->
+    <footer class="bg-[#05070a] border-t border-[#141a29] py-10 px-4 mt-20 mb-16 md:mb-0 text-xs font-mono text-slate-500">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3.5">
+                <img src="HV.png" alt="HV Logo" class="h-8 w-auto object-contain img-transparent" onerror="this.src='logo.png';">
+                <span class="text-white font-bold tracking-wider">HALOED VERTEX</span>
+                <span class="text-slate-700">|</span>
+                <span>Founding Team of <strong class="text-yellow-400">Demon Lemon Studio</strong></span>
+            </div>
+            <div class="flex items-center gap-6 text-xs font-medium text-slate-400">
+                <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+                <a href="demon-lemon.html" class="hover:text-yellow-400 transition-colors">Demon Lemon Studio</a>
+                <a href="community.html" class="hover:text-indigo-400 transition-colors">Community Hub</a>
+                <a href="about-me.html" class="hover:text-cyan-300 transition-colors">About Founder</a>
+            </div>
+            <p>© 2026 Haloed Vertex. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
