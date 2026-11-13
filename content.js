@@ -27,26 +27,26 @@ const SITE = {
      ------------------------------------------------------------------ */
   games: [
     {
-      name: "Game Name 1",
+      name: "Be a Stone!",
       status: "Released",
       live: true,
-      image: "game-1.png",
-      link: "",
+      image: "BaS.png",
+      link: "https://www.roblox.com/games/75183517512024/Be-a-Stone",
       button: "Play Now"
     },
     {
-      name: "Game Name 2",
-      status: "In Development",
-      live: false,
-      image: "game-2.png",
-      link: "",
+      name: "President for 5 Minutes",
+      status: "Released",
+      live: true,
+      image: "Pf5M.png",
+      link: "https://www.roblox.com/games/91922845881273/President-for-5-Minutes",
       button: "Play Now"
     },
     {
-      name: "Game Name 3",
+      name: "TaskForce Germany: MilSim",
       status: "Coming Soon",
       live: false,
-      image: "game-3.png",
+      image: "TaskForce.png",
       link: "",
       button: "Play Now"
     },
@@ -64,16 +64,16 @@ const SITE = {
     {
       name: "Haloed Vertex",
       role: "Investment & Growth",
-      description: "Short description of the group.",
-      image: "HV.png",
+      description: "We empower talented developers and creative studios by providing capital, marketing backing, and strategic direction to bring high-potential experiences to life.",
+      image: "HVLogo.jpg",
       link: "https://www.roblox.com/communities/199941252/Haloed-Vertex#!/about"
     },
     {
-      name: "Group Name 2",
+      name: "Demon Lemon Studio",
       role: "Game Development",
-      description: "Short description of the group.",
-      image: "group-2.png",
-      link: ""
+      description: "The in house game studio of Haloed Vertex. We design, build and run our own Roblox experiences, from first idea to live updates.",
+      image: "DLStudio.jpg",
+      link: "https://www.roblox.com/communities/149381929/Demon-Lemon-Studio#!/about"
     },
   ],
 
@@ -87,22 +87,16 @@ const SITE = {
      ------------------------------------------------------------------ */
   discord: [
     {
-      name: "Server Name 1",
+      name: "Haloed Vertex",
       subtitle: "Main Community",
-      image: "server-1.png",
-      invite: ""
+      image: "HVLogo.jpg",
+      invite: "https://discord.gg/aYgCZS64CK"
     },
     {
-      name: "Server Name 2",
-      subtitle: "Support",
-      image: "server-2.png",
-      invite: ""
-    },
-    {
-      name: "Server Name 3",
-      subtitle: "Roleplay",
-      image: "server-3.png",
-      invite: ""
+      name: "Demon Lemon Studio",
+      subtitle: "Game Development",
+      image: "DLStudio.jpg",
+      invite: "https://discord.gg/WX3bDvw3QJ"
     },
   ],
 
