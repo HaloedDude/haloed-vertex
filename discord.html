@@ -7,7 +7,7 @@
 <meta name="description" content="Join the Haloed Vertex Discord communities.">
 <meta property="og:title" content="Discord Hub | Haloed Vertex">
 <meta property="og:description" content="Join the Haloed Vertex Discord communities.">
-<meta property="og:image" content="https://haloedvertex.com/hv-bg.jpg">
+<meta property="og:image" content="https://haloedvertex.com/HV.png">
 <meta name="theme-color" content="#0a1024">
 <link rel="icon" href="HV.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,7 @@
         </div>
       </li>
       <li class="tab tab-indigo"><a href="discord.html" class="active"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm4.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>Discord Hub</a></li>
+      <li class="tab tab-blue"><a href="about-me.html"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5Z"/></svg>About Founder</a></li>
       <li class="tab tab-gold"><a href="services.html"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.4 1.3 4.5 3.4 6L4.5 21l4.3-2.4c1 .3 2.1.4 3.2.4 5.5 0 10-3.6 10-8s-4.5-8-10-8Zm-4.5 9.3a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Zm4.5 0a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Zm4.5 0a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Z"/></svg>Services &amp; Contact</a></li>
     </ul>
   </div>
@@ -55,45 +56,8 @@
         <h2 class="panel-title">Discord Communities</h2>
       </div>
 
-      <!--
-        Put your real invite links into href.
-        Live online counter: enable "Server Widget" in Discord (Server Settings > Widget)
-        and paste the Server ID into data-guild. Leave it empty to show the subtitle instead.
-      -->
-      <div class="servers">
-        <div class="server">
-          <div class="server-icon" data-img="images/discord/haloed-vertex"><!-- BILD: images/discord/haloed-vertex.png oder .jpg (quadratisch, 512x512) --><img src="HV.png" alt=""></div>
-          <div class="server-info">
-            <h3>Haloed Vertex</h3>
-            <p data-guild=""><i class="dot"></i><span>Main Community Hub</span></p>
-          </div>
-          <a class="join" href="https://discord.gg/x" target="_blank" rel="noopener">Join</a>
-        </div>
-        <div class="server">
-          <div class="server-icon" data-img="images/discord/haloed-support"><!-- BILD: images/discord/haloed-support.png oder .jpg (quadratisch, 512x512) --><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.4 9.6 8 11 4.6-1.4 8-6 8-11V5l-8-3Zm-1 14-4-4 1.4-1.4L11 13.2l4.6-4.6L17 10l-6 6Z"/></svg></div>
-          <div class="server-info">
-            <h3>Haloed Support</h3>
-            <p data-guild=""><i class="dot"></i><span>Reports &amp; Appeals</span></p>
-          </div>
-          <a class="join" href="https://discord.gg/x" target="_blank" rel="noopener">Join</a>
-        </div>
-        <div class="server">
-          <div class="server-icon" data-img="images/discord/task-force-germany"><!-- BILD: images/discord/task-force-germany.png oder .jpg (quadratisch, 512x512) --><img src="DLStudio.png" alt=""></div>
-          <div class="server-info">
-            <h3>Task Force Germany</h3>
-            <p data-guild=""><i class="dot"></i><span>Roblox MilSim</span></p>
-          </div>
-          <a class="join" href="https://discord.gg/x" target="_blank" rel="noopener">Join</a>
-        </div>
-        <div class="server">
-          <div class="server-icon" data-img="images/discord/ulm-horizons"><!-- BILD: images/discord/ulm-horizons.png oder .jpg (quadratisch, 512x512) --><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h10a5 5 0 0 1 5 5v3a3 3 0 0 1-5.4 1.8L15 15H9l-1.6 1.8A3 3 0 0 1 2 15v-3a5 5 0 0 1 5-5Zm0 3v1.5H5.5V13H7v1.5h1.5V13H10v-1.5H8.5V10H7Zm9 0.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm2 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg></div>
-          <div class="server-info">
-            <h3>Ulm Horizons</h3>
-            <p data-guild=""><i class="dot"></i><span>Hardcore ER:LC RP</span></p>
-          </div>
-          <a class="join" href="#" target="_blank" rel="noopener">Join</a>
-        </div>
-      </div>
+      <!-- Discord Server werden aus content.js geladen -->
+      <div class="servers" id="serverList"></div>
     </section>
   </div>
 </main>
@@ -107,11 +71,14 @@
       <a href="demon-lemon.html">Demon Lemon Studio</a>
       <a href="about-me.html">About Founder</a>
       <a href="services.html">Contact</a>
+      <a href="impressum.html">Legal Notice</a>
+      <a href="privacy.html">Privacy Policy</a>
     </nav>
     <small>Parent company of Demon Lemon Studio &nbsp;&bull;&nbsp; &copy; <span id="year">2026</span> Haloed Vertex. All rights reserved. Not affiliated with Roblox Corporation or Discord Inc.</small>
   </div>
 </footer>
 
+<script src="content.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

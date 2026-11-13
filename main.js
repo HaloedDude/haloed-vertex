@@ -1,3 +1,47 @@
+/* ---------- Build games, groups and Discord servers from content.js ---------- */
+(() => {
+  if (typeof SITE === 'undefined') return;
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const ext = l => l ? ` href="${esc(l)}" target="_blank" rel="noopener"` : '';
+  const ICON_DC = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm4.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>';
+  const ICON_GR = '<svg viewBox="0 0 24 24" fill="currentColor" style="width:60px;height:60px;color:#ff6b78;margin-bottom:14px"><path d="M5.2 2 22 6.6 17.8 22 1 17.4 5.2 2Zm5 7.2-.9 3.6 3.6.9.9-3.6-3.6-.9Z"/></svg>';
+
+  const games = document.getElementById('gamesGrid');
+  if (games) games.innerHTML = (SITE.games || []).map((g, i) => `
+    <div class="game">
+      <div class="thumb t${(i % 6) + 1}">
+        ${g.image ? `<img class="slot-img" src="${esc(g.image)}" alt="" onerror="this.remove()">` : ''}
+        <span>${esc(g.name)}</span>
+      </div>
+      <div class="status">${g.status ? `<i class="dot${g.live ? '' : ' dev'}"></i><b>${esc(g.status)}</b>` : ''}</div>
+      ${g.link ? `<a class="play"${ext(g.link)}>${esc(g.button || 'Play Now')}</a>` : `<span class="play ghost">Coming Soon</span>`}
+    </div>`).join('');
+
+  const groups = document.getElementById('groupsGrid');
+  if (groups) groups.innerHTML = (SITE.groups || []).map(g => `
+    <div class="group-card reveal">
+      ${g.image ? `<img src="${esc(g.image)}" alt="${esc(g.name)} logo" onerror="this.outerHTML='${ICON_GR.replace(/"/g, '&quot;')}'">` : ICON_GR}
+      <h2>${esc(g.name)}</h2>
+      <div class="role">${esc(g.role)}</div>
+      <p>${esc(g.description)}</p>
+      ${g.link ? `<a class="btn btn-blue"${ext(g.link)}>View on Roblox</a>` : ''}
+    </div>`).join('');
+
+  const servers = document.getElementById('serverList');
+  if (servers) servers.innerHTML = (SITE.discord || []).map(d => `
+    <div class="server">
+      <div class="server-icon">${d.image ? `<img src="${esc(d.image)}" alt="" onerror="this.outerHTML='${ICON_DC.replace(/"/g, '&quot;')}'">` : ICON_DC}</div>
+      <div class="server-info">
+        <h3>${esc(d.name)}</h3>
+        <p><i class="dot"></i><span>${esc(d.subtitle)}</span></p>
+      </div>
+      <a class="join${d.invite ? '' : ' disabled'}"${ext(d.invite)}>Join</a>
+    </div>`).join('');
+
+  const sd = document.getElementById('statDiscord'); if (sd) sd.dataset.count = (SITE.discord || []).length;
+  const sg = document.getElementById('statGroups');  if (sg) sg.dataset.count = (SITE.groups || []).length;
+})();
+
 /* ---------- Mobile/tablet: tap to open Roblox dropdown ---------- */
 const rTab = document.getElementById('robloxTab');
 if (rTab) rTab.querySelector('button').addEventListener('click', e => { e.stopPropagation(); rTab.classList.toggle('open'); });
@@ -72,20 +116,3 @@ document.querySelectorAll('[data-guild]').forEach(async p => {
   }catch(e){}
 });
 
-/* ---------- Image slots: loads images/<name>.png / .jpg / .jpeg / .webp if the file exists ---------- */
-document.querySelectorAll('[data-img]').forEach(el => {
-  const base = el.dataset.img, exts = ['png','jpg','jpeg','webp'];
-  const tryExt = i => {
-    if (i >= exts.length) return;
-    const test = new Image();
-    test.onload = () => {
-      if (el.tagName === 'IMG') { el.src = test.src; return; }
-      el.querySelectorAll('img,svg').forEach(n => n.remove());
-      test.alt = ''; test.className = 'slot-img';
-      el.prepend(test); el.classList.add('has-img');
-    };
-    test.onerror = () => tryExt(i + 1);
-    test.src = `${base}.${exts[i]}`;
-  };
-  tryExt(0);
-});

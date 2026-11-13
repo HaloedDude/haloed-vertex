@@ -7,7 +7,7 @@
 <meta name="description" content="The official Roblox groups of Haloed Vertex and Demon Lemon Studio.">
 <meta property="og:title" content="Roblox Groups | Haloed Vertex">
 <meta property="og:description" content="The official Roblox groups of Haloed Vertex and Demon Lemon Studio.">
-<meta property="og:image" content="https://haloedvertex.com/hv-bg.jpg">
+<meta property="og:image" content="https://haloedvertex.com/HV.png">
 <meta name="theme-color" content="#0a1024">
 <link rel="icon" href="HV.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,7 @@
         </div>
       </li>
       <li class="tab tab-indigo"><a href="discord.html"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm4.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg>Discord Hub</a></li>
+      <li class="tab tab-blue"><a href="about-me.html"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5Z"/></svg>About Founder</a></li>
       <li class="tab tab-gold"><a href="services.html"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.4 1.3 4.5 3.4 6L4.5 21l4.3-2.4c1 .3 2.1.4 3.2.4 5.5 0 10-3.6 10-8s-4.5-8-10-8Zm-4.5 9.3a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Zm4.5 0a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Zm4.5 0a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Z"/></svg>Services &amp; Contact</a></li>
     </ul>
   </div>
@@ -46,34 +47,18 @@
   <p>The official Roblox communities of Haloed Vertex.</p>
 </section>
 <main>
-  <div class="groups">
-    <div class="group-card reveal">
-      <!-- BILD: images/groups/haloed-vertex-holdings.png oder .jpg (quadratisch). Ohne Bild wird HV.png genutzt -->
-      <img src="HV.png" alt="Haloed Vertex logo" data-img="images/groups/haloed-vertex-holdings">
-      <h2>Haloed Vertex Holdings</h2>
-      <div class="role">Investment &amp; Growth</div>
-      <p>Our parent group for funding, marketing and scaling Roblox experiences.</p>
-      <a class="btn btn-blue" href="https://www.roblox.com/communities/199941252/Haloed-Vertex#!/about" target="_blank" rel="noopener">View on Roblox</a>
-    </div>
-    <div class="group-card reveal">
-      <!-- BILD: images/groups/demon-lemon-studio.png oder .jpg (quadratisch). Ohne Bild wird DLStudio.png genutzt -->
-      <img src="DLStudio.png" alt="Demon Lemon Studio logo" data-img="images/groups/demon-lemon-studio">
-      <h2>Demon Lemon Studio</h2>
-      <div class="role">Game Development</div>
-      <p>Our in house studio building and running games like Task Force Germany and Be a Stone!</p>
-      <a class="btn btn-blue" href="https://www.roblox.com/communities/149381929/Demon-Lemon-Studio#!/about" target="_blank" rel="noopener">View on Roblox</a>
-    </div>
-  </div>
+  <!-- Gruppen werden aus content.js geladen -->
+  <div class="groups" id="groupsGrid"></div>
   <section class="stats reveal">
     <h2>Community Statistics</h2>
     <div class="stat-row">
-      <div class="stat"><strong data-count="4">0</strong><span>Discord Servers</span></div>
+      <div class="stat"><strong id="statDiscord" data-count="0">0</strong><span>Discord Servers</span></div>
       <div class="stat"><svg class="gauge" viewBox="0 0 120 70"><path d="M12 62a48 48 0 0 1 96 0" fill="none" stroke="#1f2a44" stroke-width="10" stroke-linecap="round"/><path class="g-arc" d="M12 62a48 48 0 0 1 96 0" fill="none" stroke="#2fa8ff" stroke-width="10" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" data-to="30"/><line class="g-needle" x1="60" y1="62" x2="60" y2="24" stroke="#fff" stroke-width="4" stroke-linecap="round" data-to="30"/></svg></div>
-      <div class="stat"><strong id="robloxMembers" data-count="2">0</strong><span id="robloxLabel">Roblox Groups</span></div>
+      <div class="stat"><strong id="statGroups" data-count="0">0</strong><span id="robloxLabel">Roblox Groups</span></div>
       <div class="stat"><svg class="gauge" viewBox="0 0 120 70"><path d="M12 62a48 48 0 0 1 96 0" fill="none" stroke="#2a2416" stroke-width="10" stroke-linecap="round"/><path class="g-arc" d="M12 62a48 48 0 0 1 96 0" fill="none" stroke="#f2b84b" stroke-width="10" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" data-to="85"/><line class="g-needle" x1="60" y1="62" x2="60" y2="24" stroke="#fff" stroke-width="4" stroke-linecap="round" data-to="85"/></svg></div>
     </div>
     <div class="socials" style="justify-content:center;margin-top:22px">
-      <a href="https://www.roblox.com/communities/199941252/Haloed-Vertex#!/about" target="_blank" rel="noopener">Haloed Vertex Holdings</a>
+      <a href="https://www.roblox.com/communities/199941252/Haloed-Vertex#!/about" target="_blank" rel="noopener">Haloed Vertex</a>
       <a href="https://www.roblox.com/communities/149381929/Demon-Lemon-Studio#!/about" target="_blank" rel="noopener">Demon Lemon Studio</a>
     </div>
   </section>
@@ -88,11 +73,14 @@
       <a href="demon-lemon.html">Demon Lemon Studio</a>
       <a href="about-me.html">About Founder</a>
       <a href="services.html">Contact</a>
+      <a href="impressum.html">Legal Notice</a>
+      <a href="privacy.html">Privacy Policy</a>
     </nav>
     <small>Parent company of Demon Lemon Studio &nbsp;&bull;&nbsp; &copy; <span id="year">2026</span> Haloed Vertex. All rights reserved. Not affiliated with Roblox Corporation or Discord Inc.</small>
   </div>
 </footer>
 
+<script src="content.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
