@@ -7,7 +7,7 @@ const SHOP = {
   /* ---------- Shopify ----------
      Deine Shopify-Adresse, z. B. "drp-shop.myshopify.com".
      Solange hier nichts steht, zeigen die Produkte "Bald verfügbar". */
-  shopifyDomain: "",
+  shopifyDomain: "rhxase-g0.myshopify.com",
 
   /* ---------- Steuern ----------
      true  = Kleinunternehmer (§ 19 UStG), es wird keine Umsatzsteuer ausgewiesen
@@ -86,7 +86,18 @@ const SHOP = {
       },
       groessenListe: ["S", "M", "L", "XL", "XXL", "3XL"],
       varianten: {
-        /* Beispiel: "schwarz-M": "45123456789012", */
+        "weiss-S": "59959481860428",
+        "weiss-M": "59959481893196",
+        "weiss-L": "59959481925964",
+        "weiss-XL": "59959481958732",
+        "weiss-XXL": "59959481991500",
+        "weiss-3XL": "59959482024268",
+        "schwarz-S": "59959482057036",
+        "schwarz-M": "59959482089804",
+        "schwarz-L": "59959482122572",
+        "schwarz-XL": "59959482155340",
+        "schwarz-XXL": "59959482188108",
+        "schwarz-3XL": "59959482220876"
       },
       beschreibung: [
         "Der offizielle Hoodie für alle aus der Deutschland Roleplay Community. Vorne sitzt das D:RP Logo klein auf der linken Brust, hinten das große Wappen mit Skyline, Flagge und dem Schriftzug „Deutschland Roleplay“.",
@@ -113,7 +124,20 @@ const SHOP = {
         weiss:   { name: "Weiß",    hex: "#f4f4f2", bilder: ["img/sweatshirt-weiss-vorne.jpg",   "img/sweatshirt-weiss-hinten.jpg"], tragebilder: ["img/sweatshirt-weiss-getragen.jpg", "img/sweatshirt-weiss-getragen-hinten.jpg", "img/sweatshirt-weiss-getragen-2.jpg"] }
       },
       groessenListe: ["S", "M", "L", "XL", "XXL", "3XL"],
-      varianten: {},
+      varianten: {
+        "weiss-S": "59959485661516",
+        "weiss-M": "59959485694284",
+        "weiss-L": "59959485727052",
+        "weiss-XL": "59959485759820",
+        "weiss-XXL": "59959485792588",
+        "weiss-3XL": "59959485825356",
+        "schwarz-S": "59959485858124",
+        "schwarz-M": "59959485890892",
+        "schwarz-L": "59959485923660",
+        "schwarz-XL": "59959485956428",
+        "schwarz-XXL": "59959485989196",
+        "schwarz-3XL": "59959486021964"
+      },
       beschreibung: [
         "Der klassische Rundhals-Pulli im D:RP Look. Vorne das Logo klein auf der linken Brust, hinten das große Wappen mit dem Schriftzug „Deutschland Roleplay“.",
         "Weich, warm und ohne Kapuze, perfekt für Schule, Zocken oder unterwegs."
@@ -138,7 +162,20 @@ const SHOP = {
         weiss:   { name: "Weiß",    hex: "#f4f4f2", bilder: ["img/tshirt-weiss-vorne.jpg",   "img/tshirt-weiss-hinten.jpg"],   tragebilder: ["img/tshirt-weiss-getragen.jpg", "img/tshirt-weiss-getragen-hinten.jpg", "img/tshirt-weiss-getragen-2.jpg"] }
       },
       groessenListe: ["S", "M", "L", "XL", "XXL", "3XL"],
-      varianten: {},
+      varianten: {
+        "weiss-S": "59959488741708",
+        "weiss-M": "59959488774476",
+        "weiss-L": "59959488807244",
+        "weiss-XL": "59959488840012",
+        "weiss-XXL": "59959488872780",
+        "weiss-3XL": "59959488905548",
+        "schwarz-S": "59959488938316",
+        "schwarz-M": "59959488971084",
+        "schwarz-L": "59959489003852",
+        "schwarz-XL": "59959489036620",
+        "schwarz-XXL": "59959489069388",
+        "schwarz-3XL": "59959489102156"
+      },
       beschreibung: [
         "Das D:RP Shirt für jeden Tag. Vorne das Logo klein auf der linken Brust, hinten das große Wappen mit dem Schriftzug „Deutschland Roleplay“.",
         "Aus dicker, robuster Baumwolle, die auch nach vielen Wäschen in Form bleibt."
@@ -160,7 +197,9 @@ const SHOP = {
         weiss: { name: "Weiß", hex: "#ffffff", bilder: ["img/tasse.jpg", "img/tasse-rechts.jpg"], tragebilder: ["img/tasse-szene.jpg"] }
       },
       groessenListe: ["325 ml"],
-      varianten: {},
+      varianten: {
+        "weiss-325 ml": "59959491526988"
+      },
       beschreibung: [
         "Für den Kakao beim Zocken oder den Kaffee beim Moderieren: die D:RP Tasse mit dem Wappen in voller Farbe."
       ],
