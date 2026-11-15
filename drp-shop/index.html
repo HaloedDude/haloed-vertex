@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D:RP Shop | Offizieller Deutschland Roleplay Merch</title>
+<meta name="description" content="Hoodies, Sweatshirts, T-Shirts und Tassen mit dem D:RP Wappen. Auf Bestellung gedruckt und nach Deutschland und Österreich geliefert.">
+<meta property="og:title" content="D:RP Shop | Offizieller Deutschland Roleplay Merch">
+<meta property="og:description" content="Hoodies, Sweatshirts, T-Shirts und Tassen mit dem D:RP Wappen. Auf Bestellung gedruckt und nach Deutschland und Österreich geliefert.">
+<meta property="og:image" content="https://haloedvertex.com/drp-shop/img/drp-logo.png">
+
+<meta name="theme-color" content="#0a1024">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body data-page="home">
+<section class="shop-hero reveal">
+  <img src="img/drp-logo.png" alt="D:RP Wappen">
+  <div>
+    <div class="flag-bar"></div>
+    <h1>Der offizielle <span>D:RP</span> Merch</h1>
+    <p>Hoodies, Sweatshirts, T-Shirts und Tassen für alle aus der Deutschland Roleplay Community. Jedes Teil wird erst für dich gedruckt, wenn du bestellst.</p>
+    <a href="#produkte" class="btn btn-drp">Zu den Produkten</a>
+    <a href="groessen.html" class="btn btn-gold" style="margin-left:8px">Größe finden</a>
+  </div>
+</section>
+<main>
+  <div class="perks reveal">
+    <div class="perk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 5h12v10H2V5Zm13 3h4l3 4v3h-7V8ZM6 16a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm12 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z"/></svg><div><b>Lieferung in <span data-lieferzeit></span></b><span>Versand nach Deutschland und Österreich mit Sendungsnummer</span></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 0 0-5 5v3H5v12h14V10h-2V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg><div><b>Sicher bezahlen</b><span data-zahlung></span></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m3 15 12-12 6 6L9 21l-6-6Zm5.2-1.8 1.4-1.4-1.4-1.4-1.4 1.4 1.4 1.4Zm2.8-2.8 1.4-1.4L11 7.6l-1.4 1.4 1.4 1.4Zm2.8-2.8 1.4-1.4-1.4-1.4-1.4 1.4 1.4 1.4Z"/></svg><div><b>Größen S bis 3XL</b><span>Mit Größenrechner, auch für Jugendliche ab 12</span></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h12v5H6V2Zm-2 6h16a2 2 0 0 1 2 2v7h-4v5H6v-5H2v-7a2 2 0 0 1 2-2Zm4 9v3h8v-3H8Z"/></svg><div><b>Auf Bestellung gedruckt</b><span>Kein Lager, keine Verschwendung</span></div></div>
+  </div>
+
+  <h2 class="section-title" id="produkte">Produkte</h2>
+  <div class="products" id="productGrid"></div>
+
+  <h2 class="section-title">Gut zu wissen</h2>
+  <div class="two-col">
+    <div class="box reveal"><h3>Wie läuft eine Bestellung ab?</h3>
+      <ul><li>Produkt, Farbe und Größe auswählen und in den Warenkorb legen.</li>
+      <li>Im sicheren Checkout von Shopify Adresse und Zahlungsart angeben.</li>
+      <li>Dein Teil wird für dich gedruckt und direkt zu dir geschickt.</li>
+      <li>Per E-Mail bekommst du die Bestätigung und die Sendungsnummer.</li></ul></div>
+    <div class="box reveal"><h3>Du bist unter 18?</h3>
+      <p>Kein Problem, bestell einfach zusammen mit deinen Eltern. Für die Bezahlung braucht man ein Konto (zum Beispiel PayPal oder eine Karte), das meistens nur Erwachsene haben. Zeig ihnen am besten vorher die <a href="groessen.html">Größentabelle</a>, damit die Größe passt.</p></div>
+    <div class="box reveal"><h3>Versand und Kosten</h3>
+      <p>Wir liefern nach Deutschland und Österreich. Die Versandkosten betragen <span data-versand></span> pro Bestellung. <span data-versandfrei></span> <span data-steuer></span></p>
+      <p style="margin-top:8px"><a href="versand-zahlung.html">Mehr zu Versand und Zahlung →</a></p></div>
+    <div class="box reveal"><h3>Fragen oder Probleme?</h3>
+      <p>Schreib uns an <a href="mailto:support@haloedvertex.com">support@haloedvertex.com</a>. Bei Druckfehlern oder Schäden schick uns bitte ein Foto, dann kümmern wir uns schnell darum.</p></div>
+  </div>
+</main>
+<script src="shop-data.js"></script>
+<script src="shop.js"></script>
+<script src="../main.js"></script>
+</body>
+</html>
