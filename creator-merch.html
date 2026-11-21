@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creator Merch | Haloed Vertex</title>
+<meta name="description" content="Your own merch shop for your community, without upfront costs. We design, host and run it, you earn on every sale.">
+<meta property="og:title" content="Creator Merch | Haloed Vertex">
+<meta property="og:description" content="Your own merch shop for your community, without upfront costs. We design, host and run it, you earn on every sale.">
+<meta property="og:image" content="https://haloedvertex.com/HV.png">
+<meta name="theme-color" content="#0a1024">
+<link rel="icon" href="HV.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="merch" data-title-de="Creator-Merch | Haloed Vertex">
+
+<div class="bg-image" aria-hidden="true"></div>
+<canvas id="network" aria-hidden="true"></canvas>
+
+<header id="site-header"></header>
+
+<section class="page-hero reveal">
+  <span class="eyebrow" data-i18n="merch.eyebrow">CREATOR MERCH</span>
+  <h1 data-i18n="nav.merch">Creator Merch</h1>
+  <p data-i18n="merch.lead">Your own merch shop for your community, stream or server. No upfront costs, no stock, no stress. We build and run it, you earn on every sale.</p>
+</section>
+
+<main>
+  <div class="steps reveal" style="margin-top:20px">
+    <div class="step"><h3 data-i18n="merch.s1t">Apply</h3><p data-i18n="merch.s1p">Tell us about your community and send us your logo.</p></div>
+    <div class="step"><h3 data-i18n="merch.s2t">We design and build</h3><p data-i18n="merch.s2p">Hoodies, sweatshirts, T-shirts and mugs with your logo, plus your own shop page on haloedvertex.com.</p></div>
+    <div class="step"><h3 data-i18n="merch.s3t">Launch and promote</h3><p data-i18n="merch.s3p">You share your shop with your community. Every item is printed after it is ordered.</p></div>
+    <div class="step"><h3 data-i18n="merch.s4t">Get paid monthly</h3><p data-i18n="merch.s4p">You receive your share for every item sold, paid out monthly with a statement.</p></div>
+  </div>
+  <div class="trust reveal">
+    <div><strong data-i18n="merch.t1t">No upfront costs</strong><span data-i18n="merch.t1p">Zero risk for you</span></div>
+    <div><strong data-i18n="merch.t2t">Print on demand</strong><span data-i18n="merch.t2p">No stock, no leftovers</span></div>
+    <div><strong data-i18n="merch.t3t">Shipping DE and AT</strong><span data-i18n="merch.t3p">Straight to your fans</span></div>
+    <div><strong data-i18n="merch.t4t">Monthly payouts</strong><span data-i18n="merch.t4p">With a clear statement</span></div>
+  </div>
+
+  <h2 class="block-title reveal" data-i18n="merch.liveTitle">Live example</h2>
+  <div class="showcase reveal">
+    <img src="drp-shop/img/drp-logo.png" alt="D:RP logo" onerror="this.remove()">
+    <div><h3>D:RP Shop</h3><p data-i18n="merch.drpText">Official merch for Deutschland Roleplay. Hoodies, sweatshirts, T-shirts and mugs, fully built and run by us.</p></div>
+    <a class="btn btn-gold" href="drp-shop/" data-i18n="merch.drpBtn">Visit shop</a>
+  </div>
+
+  <h2 class="block-title reveal" id="apply" data-i18n="merch.applyTitle">Apply now</h2>
+  <p class="block-lead" data-i18n="merch.applyLead">Your share per item is agreed individually and fixed in a written agreement before launch.</p>
+  <form class="form-card" data-mailform data-subject="Creator Merch application">
+    <div class="form-grid">
+      <div class="field"><label for="f-name" data-i18n="f.name">Name</label><input id="f-name" name="Name" required autocomplete="name"></div>
+      <div class="field"><label for="f-mail" data-i18n="f.email">Email</label><input id="f-mail" name="Email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="f-dc" data-i18n="f.discord">Discord username (optional)</label><input id="f-dc" name="Discord"></div>
+      <div class="field"><label for="m-com" data-i18n="merch.f.community">Community name</label><input id="m-com" name="Community" required></div>
+      <div class="field"><label for="m-link" data-i18n="merch.f.link">Link (Discord, Twitch, YouTube, TikTok …)</label><input id="m-link" name="Link" type="url" placeholder="https://"></div>
+      <div class="field"><label for="m-size" data-i18n="merch.f.size">Community size</label>
+        <select id="m-size" name="Size">
+          <option>&lt; 100</option><option>100 – 1,000</option><option>1,000 – 10,000</option><option>10,000+</option>
+        </select></div>
+      <div class="field"><label for="m-logo" data-i18n="merch.f.logo">Logo</label>
+        <select id="m-logo" name="Logo">
+          <option value="Has logo" data-i18n="merch.o.logo1">Yes, I have a logo</option>
+          <option value="Needs help" data-i18n="merch.o.logo2">No, I need help</option>
+          <option value="Not sure" data-i18n="merch.o.logo3">Not sure yet</option>
+        </select></div>
+      <div class="field full"><span class="label" data-i18n="merch.f.products">Products you want</span>
+        <div class="checks">
+          <label><input type="checkbox" name="Products" value="Hoodie" checked> Hoodie</label>
+          <label><input type="checkbox" name="Products" value="Sweatshirt"> Sweatshirt</label>
+          <label><input type="checkbox" name="Products" value="T-Shirt" checked> T-Shirt</label>
+          <label><input type="checkbox" name="Products" value="Mug"> <span data-i18n="merch.o.mug">Mug</span></label>
+        </div></div>
+      <div class="field full"><label for="m-msg" data-i18n="merch.f.msg">Message (optional)</label><textarea id="m-msg" name="Message"></textarea></div>
+    </div>
+    <label class="consent"><input type="checkbox" name="_age" required><span data-i18n="merch.f.age">I am 18 or older, or I have my parents' permission.</span></label>
+    <label class="consent"><input type="checkbox" name="_consent" required><span data-i18n="f.consent">I agree that my details are used to answer my request (see <a href="privacy.html">Privacy Policy</a>).</span></label>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-blue" data-i18n="merch.f.send">Send application</button>
+      <span class="form-hint" data-i18n="f.hint">Opens your email app with your request ready to send.</span>
+      <span class="form-ok" data-i18n="f.ok">Your email app has been opened. Please press send there.</span>
+    </div>
+  </form>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="i18n.js"></script>
+<script src="layout.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

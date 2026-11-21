@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Templates & Custom Websites | Haloed Vertex</title>
+<meta name="description" content="Website templates for communities, creators and merch shops, plus custom websites built to your description.">
+<meta property="og:title" content="Website Templates & Custom Websites | Haloed Vertex">
+<meta property="og:description" content="Website templates for communities, creators and merch shops, plus custom websites built to your description.">
+<meta property="og:image" content="https://haloedvertex.com/HV.png">
+<meta name="theme-color" content="#0a1024">
+<link rel="icon" href="HV.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="websites" data-title-de="Website-Vorlagen & individuelle Websites | Haloed Vertex">
+
+<div class="bg-image" aria-hidden="true"></div>
+<canvas id="network" aria-hidden="true"></canvas>
+
+<header id="site-header"></header>
+
+<section class="page-hero reveal">
+  <span class="eyebrow" data-i18n="web.eyebrow">WEBSITES</span>
+  <h1 data-i18n="nav.websites">Websites</h1>
+  <p data-i18n="web.lead">Website templates to download, or a custom website built exactly to your description.</p>
+</section>
+
+<main>
+  <h2 class="block-title" style="margin-top:20px" data-i18n="web.tplTitle">Website templates</h2>
+  <div class="products" data-cat="websites"></div>
+  <p class="price-note" data-i18n="price.note">One-time prices. VAT is not charged under § 19 UStG (German small business regulation).</p>
+
+  <h2 class="block-title reveal" id="custom" data-i18n="web.customTitle">Custom website on demand</h2>
+  <p class="block-lead" data-i18n="web.customLead">Describe your website and get a free, non binding quote within 48 hours. Custom websites start at €149.</p>
+  <div class="steps three reveal">
+    <div class="step"><h3 data-i18n="web.s1t">Describe</h3><p data-i18n="web.s1p">Fill in the form: purpose, pages, features and style.</p></div>
+    <div class="step"><h3 data-i18n="web.s2t">Quote</h3><p data-i18n="web.s2p">You get a fixed price and a timeline. Work only starts once you agree.</p></div>
+    <div class="step"><h3 data-i18n="web.s3t">Build and launch</h3><p data-i18n="web.s3p">We build, you give feedback, then your website goes live.</p></div>
+  </div>
+
+  <form class="form-card" data-mailform data-subject="Website request">
+    <div class="form-grid">
+      <div class="field"><label for="f-name" data-i18n="f.name">Name</label><input id="f-name" name="Name" required autocomplete="name"></div>
+      <div class="field"><label for="f-mail" data-i18n="f.email">Email</label><input id="f-mail" name="Email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="f-dc" data-i18n="f.discord">Discord username (optional)</label><input id="f-dc" name="Discord"></div>
+      <div class="field"><label for="w-type" data-i18n="web.f.type">Type of website</label>
+        <select id="w-type" name="Type" required>
+          <option value="Community / Discord" data-i18n="web.o.community">Community or Discord server</option>
+          <option value="Portfolio" data-i18n="web.o.portfolio">Portfolio</option>
+          <option value="Business" data-i18n="web.o.business">Business</option>
+          <option value="Online shop" data-i18n="web.o.shop">Online shop</option>
+          <option value="Other" data-i18n="web.o.other">Other</option>
+        </select></div>
+      <div class="field"><label for="w-pages" data-i18n="web.f.pages">Number of pages</label>
+        <select id="w-pages" name="Pages">
+          <option value="1" data-i18n="web.o.p1">1 page</option>
+          <option value="2-5" data-i18n="web.o.p2">2 to 5 pages</option>
+          <option value="6+" data-i18n="web.o.p3">6 or more pages</option>
+        </select></div>
+      <div class="field"><label for="w-budget" data-i18n="web.f.budget">Budget</label>
+        <select id="w-budget" name="Budget">
+          <option value="under 150 EUR" data-i18n="web.o.b1">under €150</option>
+          <option value="150-300 EUR" data-i18n="web.o.b2">€150 to €300</option>
+          <option value="300-600 EUR" data-i18n="web.o.b3">€300 to €600</option>
+          <option value="600+ EUR" data-i18n="web.o.b4">over €600</option>
+        </select></div>
+      <div class="field"><label for="w-date" data-i18n="web.f.deadline">Desired launch date (optional)</label><input id="w-date" name="Launch date" type="date"></div>
+      <div class="field full"><label for="w-desc" data-i18n="web.f.desc">Describe your website</label>
+        <textarea id="w-desc" name="Description" required data-i18n-ph="web.f.descPh" placeholder="What is it for, which pages and features do you need, which colors or websites do you like?"></textarea></div>
+    </div>
+    <label class="consent"><input type="checkbox" name="_consent" required><span data-i18n="f.consent">I agree that my details are used to answer my request (see <a href="privacy.html">Privacy Policy</a>).</span></label>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-blue" data-i18n="f.send">Send request</button>
+      <span class="form-hint" data-i18n="f.hint">Opens your email app with your request ready to send.</span>
+      <span class="form-ok" data-i18n="f.ok">Your email app has been opened. Please press send there.</span>
+    </div>
+  </form>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="i18n.js"></script>
+<script src="layout.js"></script>
+<script src="store-data.js"></script>
+<script src="store.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
